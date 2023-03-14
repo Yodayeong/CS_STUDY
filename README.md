@@ -1,2 +1,12 @@
 # CS_STUDY
-repo for computer science study
+
+<br>
+
+📌 기술 면접 준비를 위해 cs 지식들을 정리해 놓은 레포입니다.
+
+<br>
+
+### 🗝Algorithms
+
+- Algorithms: Efficiency, Analysis, and Order
+- Divide-and-Conquer
