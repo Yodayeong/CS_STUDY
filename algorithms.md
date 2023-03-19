@@ -209,7 +209,7 @@ int main() {
 >
 > 두 행렬의 곱셈 결과를 N개의 줄에 한 줄에 한 행씩 차례대로 출력한다.
 
-![KakaoTalk_20230316_174732158](algorithms.assets/KakaoTalk_20230316_174732158.jpg)
+![KakaoTalk_20230318_102329978](algorithms.assets/KakaoTalk_20230318_102329978.jpg)
 
 ```cpp
 ```
