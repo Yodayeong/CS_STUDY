@@ -6,10 +6,6 @@
 
 <br>
 
-**기본 개념들**
-
-<br>
-
 algorithm
 
 > 문제를 풀기 위한 step-by-step 절차이다.
@@ -34,9 +30,7 @@ instance
 >
 > 알고리즘 문제는 instance 집합과 output이 가져야하는 속성들이 주어지면 명시된다. 
 
-
-
-<br><br>
+<br>
 
 **problem ex1) - Sequential Search**
 
@@ -201,8 +195,6 @@ int main() {
 >
 > 다음 줄부터 N개의 줄에 첫 번째 N*N 행렬의 원소가 한 줄에 한 행씩 차례대로 주어진다.
 >
-> 다음 줄부터 N개의 줄에 두 번째 N*N 행렬의 원소가 한 줄에 한 행씩 차례대로 주어진다.
->
 > 
 >
 > **Output**
@@ -212,5 +204,46 @@ int main() {
 ![KakaoTalk_20230318_102329978](algorithms.assets/KakaoTalk_20230318_102329978.jpg)
 
 ```cpp
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+typedef vector<vector<int>> matrix_t;
+
+void multiMatrix(int n, matrix_t A, matrix_t B, matrix_t& C) {
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            for (int k = 1; k <= n; k++)
+                C[i][j] += A[i][k] * B[k][j];
+}
+
+void matrixRead(int n, matrix_t& M) {
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            scanf("%d", &M[i][j]);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    matrix_t A(n+1, vector<int>(n+1));
+    matrix_t B(n+1, vector<int>(n+1));
+    matrixRead(n, A);
+    matrixRead(n, B);
+
+    matrix_t C(n+1, vector<int>(n+1));
+    multiMatrix(n, A, B, C);
+
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            if (j == n)
+                printf("%d\n", C[i][j]);
+            else
+                printf("%d ", C[i][j]);
+
+}
 ```
 
