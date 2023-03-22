@@ -247,3 +247,122 @@ int main() {
 }
 ```
 
+<br>
+
+#### 📌Five Properties
+
+<br>
+
+1. 입력(input)
+
+   : 0개 이상의 외부 입력 데이터가 존재해야 한다.
+
+2. 출력(output)
+
+   : 하나 이상의 결과가 나와야 한다.
+
+3. 명확성(unambiguity)
+
+   : 모든 명령들은 모호하지 않고 단순 명확해야 한다.
+
+4. 유한성(finiteness)
+
+   : 한정된 수의 단계 후에 반드시 종료해야 한다.
+
+5. 유효성(feasibility)
+
+   : 모든 명령은 실행 가능해야 한다.
+
+<br>
+
+**problem ex5) - Binary Search**
+
+> **Input**
+>
+> 첫째 줄에 양의 정수 N과 M이 주어진다.
+>
+> 둘째 줄에 N개의 양의 정수가 주어진다.
+>
+> 셋째 줄에 M개의 양의 정수가 주어진다.
+>
+> 
+>
+> **Output**
+>
+> 첫째 줄부터 한 줄에 하나씩, 입력의 셋째 줄에 주어진 양의 정수 x에 대해 아래와 같은 형식으로 위치를 출력한다.
+>
+> x is in location.
+>
+> 만약 x*x*가 주어진 입력에 존재하지 않으면 다음과 같이 출력한다.
+>
+> x is not in S.
+
+```cpp
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+//이진탐색
+//정렬된 array에서 해당 변수의 위치를 출력하는 알고리즘
+
+void binsearch(int N, int x, vector<int> S, int& location) {
+    int start = 1;
+    int end = N;
+    location = 0;
+
+    while (start <= end) {
+        int mid = (start + end) / 2;
+
+        if (x == S[mid]) {
+           location = mid;
+           return; 
+        }
+        else if (x < S[mid])
+            end = mid - 1;
+        else
+            start = mid + 1;
+
+    }
+}
+
+int main() {
+    int N, M;
+    scanf("%d %d", &N, &M);
+
+    vector<int> S(N+1);
+    for (int i = 1; i <= N; i++)
+        scanf("%d", &S[i]);
+
+    //sort 함수
+    //기본적으로 오름차순으로 정리
+    //배열의 시작 주소와 마지막 주소 +1을 적으면 됨
+    sort(S.begin()+1, S.end());
+
+    for (int j = 1; j <= M; j++) {
+        int x, location;
+        scanf("%d", &x);
+        binsearch(N, x, S, location);
+
+        if (location == 0)
+            printf("%d is not in S.\n", x);
+        else
+            printf("%d is in %d.\n", x, location);
+    }
+
+}
+```
+
+<br>
+
+#### 📌Sequential Search vs Binary Search
+
+- 최악의 경우(array에 찾고자 하는 값이 들어가있지 않은 경우), 각각의 시간 복잡도
+  - sequential search : "n" comparisons
+    - 처음부터 n까지 차례차례 비교해나가야 함
+  - binary search : "log2(n) + 1" comparisons
+    - 반띵 해나가면서 비교하기 때문에 log2(n) 만큼의 비교가 일어나고, 배열의 길이가 1만 남았을 때 남아있는 원소와 찾고자 하는 원소가 일치하는지 1 만큼의 비교 연산을 함
+- array가 32개의 아이템을 가질 때, 각각의 시간 복잡도
+  - sequential search : 32 comparisons
+  - binary search : 6 comparisons
