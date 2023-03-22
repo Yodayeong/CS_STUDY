@@ -366,3 +366,61 @@ int main() {
 - array가 32개의 아이템을 가질 때, 각각의 시간 복잡도
   - sequential search : 32 comparisons
   - binary search : 6 comparisons
+
+<br>
+
+**problem ex6) - Fibonacci(Recursive)**
+
+> **Description**
+>
+> 교재의 Algorithm 1.6. Fibonacci (Recursive) 를 재귀 버전으로 구현하시오.
+>
+> 이 문제에서는 피보나치 수와 함께 fib() 함수의 호출 횟수를 출력해야 한다.
+>
+> 단, 피보나치 수의 크기가 정수 범위를 넘어가지 않도록 다음과 같이 피보나치 수를 정의한다.
+>
+> F(n) = (F(n-1) + F(n-2)) % 1000000
+>
+> 
+>
+> **Input**
+>
+> 첫째 줄에 음이 아닌 정수 N이 주어진다. (0&lt;=*N*<=30)
+>
+> 
+>
+> **Output**
+>
+> 첫째 줄에 피보나치 수를 1000000 으로 나눈 나머지를 출력한다.
+>
+> 둘째 줄에 fib() 함수를 호출한 횟수를 출력한다.
+
+```cpp
+//fibonacci
+//0은 0을, 1은 1을 출력하고
+//나머지 수 f(n) = f(n-1) + f(n-2) % 1000000
+
+#include <iostream>
+using namespace std;
+
+int cnt = 0;
+
+int fib(int n) {
+    cnt ++;
+
+    if (n <= 1)
+        return n;
+    else
+        return (fib(n-1) + fib(n-2)) % 1000000;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    int answer = fib(n);
+    cout << answer << endl;
+    cout << cnt;
+}
+```
+
