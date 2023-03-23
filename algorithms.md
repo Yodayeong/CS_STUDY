@@ -424,3 +424,68 @@ int main() {
 }
 ```
 
+<br>
+
+Ex) ![IMG_1532](/Users/yodayeong/Desktop/IMG_1532.jpg)
+
+fib(5)를 실행했을 때의 값은 5이고, 재귀함수를 시행한 횟수는 총 15회이다.
+
+=> 피보나치 알고리즘을 재귀로 구현할 경우, 상당히 **비효율적**이다. fib(5)를 계산하기 위해 fib(2)만 해도 벌써 3번을 호출했기 때문이다.
+
+=> 같은 수를 다시 계산할 필요가 없도록, 계산 후에 array에 저장해놓으면 된다.
+
+<br>
+
+**problem ex7) - Fibonacci(Iterative)**
+
+> **Description**
+>
+> 교재의 Algorithm 1.7. Fibonacci (Iterative) 를 반복 버전으로 구현하시오.
+>
+> 단, 피보나치 수의 크기가 정수 범위를 넘어가지 않도록 다음과 같이 피보나치 수를 정의한다.
+>
+> F(n) = (F(n-1) + F(n-2)) % 1000000
+>
+> 
+>
+> **Input**
+>
+> 첫째 줄에 음이 아닌 정수 N이 주어진다. (0&lt;=*N*<=10000)
+>
+> 
+>
+> **Output**
+>
+> 첫째 줄에 피보나치 수를 1000000 으로 나눈 나머지를 출력한다.
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef unsigned long long LongInt;
+
+LongInt fib(int n) {
+    vector<LongInt> S;
+    if (n <= 1)
+        return n;
+    else {
+        S.push_back(0);
+        S.push_back(1);
+        for (int i = 2; i <= n; i++)
+            S.push_back((S[i-1] + S[i-2])%1000000);
+        
+        return S[n] % 1000000;
+    }
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    LongInt answer = fib(n);
+
+    cout << answer;
+}
+```
+
