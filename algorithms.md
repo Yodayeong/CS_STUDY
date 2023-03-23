@@ -426,7 +426,7 @@ int main() {
 
 <br>
 
-Ex) ![IMG_1532](/Users/yodayeong/Desktop/IMG_1532.jpg)
+Ex) ![IMG_1532](algorithms.assets/IMG_1532.jpg)
 
 fib(5)를 실행했을 때의 값은 5이고, 재귀함수를 시행한 횟수는 총 15회이다.
 
