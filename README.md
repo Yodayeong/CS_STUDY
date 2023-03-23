@@ -7,5 +7,4 @@
 ### 🗝Algorithms
 
 - [Algorithms: Efficiency, Analysis, and Order](./algorithms.md)
-hello
 - Divide-and-Conquer
