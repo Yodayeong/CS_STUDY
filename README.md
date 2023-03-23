@@ -7,6 +7,4 @@
 ### 🗝Algorithms
 
 - [Algorithms: Efficiency, Analysis, and Order](./algorithms.md)
-  - Exercise1
-  - Exercise2
 - Divide-and-Conquer
