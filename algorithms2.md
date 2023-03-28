@@ -30,7 +30,7 @@
 
 Ex) Exchange Sort의 Complexity
 
-![IMG_8631E4CDAC09-1](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/IMG_8631E4CDAC09-1.jpeg)
+![exchange_sort](algorithms.assets/exchange_sort.jpeg)
 
 - input size 는 n이다.
 
