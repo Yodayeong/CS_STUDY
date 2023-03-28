@@ -6,5 +6,7 @@
 
 ### 🗝Algorithms
 
-- [Algorithms: Efficiency, Analysis, and Order](./algorithms.md)
+- Algorithms: Efficiency, Analysis, and Order
+    - [part1](./algorithms.md)
+    - [part2](./algoritms2.md)
 - Divide-and-Conquer
