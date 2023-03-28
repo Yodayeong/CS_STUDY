@@ -8,5 +8,5 @@
 
 - Algorithms: Efficiency, Analysis, and Order
     - [part1](./algorithms.md)
-    - [part2](./algoritms2.md)
+    - [part2](./algorithms2.md)
 - Divide-and-Conquer
