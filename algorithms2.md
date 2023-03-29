@@ -2,7 +2,7 @@
 
 #### 📌Algorithm Analysis
 
-알고리즘 분석에는 두가지 방법이 있습니다.
+알고리즘 분석에는 두가지 방법이 있다.
 
 - The correctness of an algorithm
 
@@ -28,6 +28,8 @@
 
 이때, 단위 연산은 합리적이게 정해야 한다. **알고리즘에 의해 수행된 작업은, basic operation의 연산 횟수에 대략적으로 비례해야 한다.**
 
+<br>
+
 Ex) Exchange Sort의 Complexity
 
 ![exchange_sort](algorithms.assets/exchange_sort.jpeg)
@@ -41,3 +43,17 @@ Ex) Exchange Sort의 Complexity
   - ...
   - i가 n일 때, 배교연산의 수행횟수는 1 로,
 - exchange sort의 complexity = (n-1) + (n-2) + ... + 1 = 1/2(n)(n-1) 이 된다.
+
+<br>
+
+#### 📌Time Complexity Analysis
+
+- T(n) : 시간에 대한 복잡도로, 각 input size n에 대해 얼마나 많은 수의 단위 연산을 수행했는지 계산
+- 그러나, 입력 크기 뿐 아니라 입력 값에 따라 time complexity가 달라지는 경우가 있다. 이런 경우에는 3가지 측정법이 있다.
+  - best-case time complexity
+  - worst-case time complexity
+  - average-case time complexity
+- Sequential search를 위의 세가지 경우로 계산해보겠다.
+  - B(n) = 1. 입력 값이 배열의 제일 첫값이면 한번만 수행하면 된다.
+  - W(n) = n. 입력 값이 배열에 없으면 n번 수행한다.
+  - A(n) = 1/2(n+1). 입력 값이 배열에 있는 경우가 평균 경우가 된다. 배열의 1, 2, ..., 5번째 있는 경우를 모두 계산해주면 (1+2+3+4+5)/3 = 3이 된다. 따라서 A(n) = 1/2(n+1)이 된다.
