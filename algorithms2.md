@@ -154,7 +154,7 @@ void algorithm3(int n) {
 }
 ```
 
-![로그](algorithms.assets/로그.jpg)
+![로그](algorithms.assets/log.jpg)
 
 바깥쪽 for문이 (lgn+1)이고, 안쪽 for문도 (lgn+1)이므로, 이 둘을 곱하면, (lgn^2 + 2lgn + 2)가 된다. 이는 O(lgn^2)에 속한다.
 
@@ -231,6 +231,6 @@ void algorithm7(int n) {
 }
 ```
 
-![practice2](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/practice2.jpg)
+![practice2](algorithms.assets/practice2.jpg)
 
 식을 정의하진 못했지만, algorithm7(1) = 3^0, algorithm7(4) = 3^0 + 3^1, algorithm7(8) = 3^0 + 3^1 + 3^2 와 같은 규칙이 있는 것을 발견하였다.

@@ -32,7 +32,7 @@ instance
 
 <br>
 
-**problem ex1) - Sequential Search**
+**🔧problem ex1) - Sequential Search**
 
 > **Input**
 >
@@ -94,7 +94,7 @@ int main() {
 
 <br>
 
-**problem ex2) - Adding Array Members**
+**🔧problem ex2) - Adding Array Members**
 
 > **Input**
 >
@@ -138,7 +138,7 @@ int main() {
 
 <br>
 
-**problem ex3) - Exchange Sort**
+**🔧problem ex3) - Exchange Sort**
 
 > **Input**
 >
@@ -187,7 +187,7 @@ int main() {
 
 <br>
 
-**problem ex4) - Matrix Multiplication**
+**🔧problem ex4) - Matrix Multiplication**
 
 > **Input**
 >
@@ -275,7 +275,7 @@ int main() {
 
 <br>
 
-**problem ex5) - Binary Search**
+**🔧problem ex5) - Binary Search**
 
 > **Input**
 >
@@ -369,7 +369,7 @@ int main() {
 
 <br>
 
-**problem ex6) - Fibonacci(Recursive)**
+**🔧problem ex6) - Fibonacci(Recursive)**
 
 > **Description**
 >
@@ -436,7 +436,7 @@ fib(5)를 실행했을 때의 값은 5이고, 재귀함수를 시행한 횟수�
 
 <br>
 
-**problem ex7) - Fibonacci(Iterative)**
+**🔧problem ex7) - Fibonacci(Iterative)**
 
 > **Description**
 >
@@ -491,7 +491,7 @@ int main() {
 
 <br>
 
-**problem ex8) - 최솟값, 중앙값, 최댓값**
+**🔧problem ex8) - 최솟값, 중앙값, 최댓값**
 
 > **Description**
 >
