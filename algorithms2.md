@@ -48,12 +48,64 @@ Ex) Exchange Sort의 Complexity
 
 #### 📌Time Complexity Analysis
 
-- T(n) : 시간에 대한 복잡도로, 각 input size n에 대해 얼마나 많은 수의 단위 연산을 수행했는지 계산
+- **T(n)** : 시간에 대한 복잡도로, 각 input size n에 대해 얼마나 많은 수의 단위 연산을 수행했는지 계산한다. 입력 값이 아닌, 입력의 크기와만 상관있다.
 - 그러나, 입력 크기 뿐 아니라 입력 값에 따라 time complexity가 달라지는 경우가 있다. 이런 경우에는 3가지 측정법이 있다.
-  - best-case time complexity
-  - worst-case time complexity
-  - average-case time complexity
-- Sequential search를 위의 세가지 경우로 계산해보겠다.
+  - **best-case time complexity**
+  - **worst-case time complexity**
+  - **average-case time complexity**
+- Sequential search는 입력 값에 따라 시간 복잡도가 달라진다. 위의 세가지 경우로 계산해보겠다.
   - B(n) = 1. 입력 값이 배열의 제일 첫값이면 한번만 수행하면 된다.
   - W(n) = n. 입력 값이 배열에 없으면 n번 수행한다.
   - A(n) = 1/2(n+1). 입력 값이 배열에 있는 경우가 평균 경우가 된다. 배열의 1, 2, ..., 5번째 있는 경우를 모두 계산해주면 (1+2+3+4+5)/3 = 3이 된다. 따라서 A(n) = 1/2(n+1)이 된다.
+
+<br>
+
+#### 📌Order
+
+1번 알고리즘의 T(n) = 100n 이고, 2번 알고리즘의 T(n) = 0.01n^2 이라고 한다면, 더 효율적인 알고리즘은 1번 알고리즘이다. n의 크기가 작을 때는 2번 알고리즘이 더 효율적이 겠지만, 수가 커지면 궁극적으로는 1번 알고리즘이 더 효율적이기 때문이다. 1번 알고리즘은 1차식으로 증가를 하고 2번 알고리즘은 2차식으로 증가하므로 2번 알고리즘의 증가율이 더 높다. **따라서, 알고리즘의 효율성을 비교하기 위해서는 앞의 계수보다는 식의 차수가 더 중요하다.**
+
+<br>
+
+- **Asymptotic Notations (점근적 표기법)**
+  
+  - O(빅오)
+    
+    ![bigo](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/bigo.jpg)
+    
+    - **g(n) <= c * f(n)**
+    - O(g(n)) 은 c * f(n) 이라는 함수보다 증가율이 같거나 더 느린 함수들의 집합이다. 
+    - 점근적인 상한을 정한다.
+    - worst-case를 점근적으로 표기한 것 => O(f(n))이 아무리 느려도 궁극적으로는 cf(n)보다는 빠르다.
+    
+  - Ω(오메가)
+  
+    - ![omega](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/omega.jpg)
+    - **g(n) >= c * f(n)**
+    - Ω(g(n))은 c * f(n) 이라는 함수보다 증가율이 같거나 더 빠른 함수들의 집합이다. 
+    - 점근적인 하한을 정한다.
+    - O(f(n))이 아무리 빨라도 궁극적으로는 cf(n)보다는 느리다.
+  
+  - θ(세타)
+  
+    - ![seta](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/seta.jpg)
+    - **g(n) = c * f(n)**
+    - θ(g(n))은 c * f(n) 이라는 함수와 증가율이 같은 함수들의 집합이다. 
+    - 함수의 차수를 결정한다.
+  
+  - 빅오, 세타, 오메가의 관계
+  
+    ![diagram](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/diagram.jpeg)
+
+<br>
+
+- **자주 쓰이는 복잡도 종류**
+  - θ(1): constant time complexity / 상수 시간 복잡도
+  - θ(lg n): logarithmic time complexity / 로그 시간 복잡도
+  - θ(n): linear time complexity / 선형 시간 복잡도
+  - θ(n lg n): linear logarithmic time complexity / 선형 로그 시간 복잡도
+  - θ(n^k): exponential time complexity / 다항 시간 복잡도
+    - θ(n^2): quadratic time complexity
+    - θ(n^3): cubic time complexity
+  - θ(k^n): exponential time complexity / 지수 시간 복잡도
+    - θ(2^n)
+  - polynomial-time complexity는 효율적인 알고리즘으로, exponential-time complexity는 비효율적인 알고리즘으로 여겨진다.
