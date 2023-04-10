@@ -70,7 +70,7 @@ Ex) Exchange Sort의 Complexity
   
   - O(빅오)
     
-    ![bigo](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/bigo.jpg)
+    ![bigo](algorithms.assets/bigo.jpg)
     
     - **g(n) <= c * f(n)**
     - O(g(n)) 은 c * f(n) 이라는 함수보다 증가율이 같거나 더 느린 함수들의 집합이다. 
@@ -79,7 +79,7 @@ Ex) Exchange Sort의 Complexity
     
   - Ω(오메가)
   
-    - ![omega](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/omega.jpg)
+    - ![omega](algorithms.assets/omega.jpg)
     - **g(n) >= c * f(n)**
     - Ω(g(n))은 c * f(n) 이라는 함수보다 증가율이 같거나 더 빠른 함수들의 집합이다. 
     - 점근적인 하한을 정한다.
@@ -87,7 +87,7 @@ Ex) Exchange Sort의 Complexity
   
   - θ(세타)
   
-    - ![seta](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/seta.jpg)
+    - ![seta](algorithms.assets/seta.jpg)
     - **g(n) = c * f(n)**
     - θ(g(n))은 c * f(n) 이라는 함수와 증가율이 같은 함수들의 집합이다. 
     - 함수의 차수를 결정한다.
@@ -109,3 +109,6 @@ Ex) Exchange Sort의 Complexity
   - θ(k^n): exponential time complexity / 지수 시간 복잡도
     - θ(2^n)
   - polynomial-time complexity는 효율적인 알고리즘으로, exponential-time complexity는 비효율적인 알고리즘으로 여겨진다.
+
+<br>
+
