@@ -94,11 +94,14 @@ Ex) Exchange Sort의 Complexity
   
   - 빅오, 세타, 오메가의 관계
   
-    ![diagram](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/diagram.jpeg)
+    ![diagram](algorithms.assets/diagram.jpeg)
 
 <br>
 
 - **자주 쓰이는 복잡도 종류**
+  
+  ![graph](algorithms.assets/graph.jpg)
+  
   - θ(1): constant time complexity / 상수 시간 복잡도
   - θ(lg n): logarithmic time complexity / 로그 시간 복잡도
   - θ(n): linear time complexity / 선형 시간 복잡도
@@ -112,3 +115,122 @@ Ex) Exchange Sort의 Complexity
 
 <br>
 
+**🔧problem ex1)**
+
+```cpp
+void algorithm1(int n) {
+  for (int i = 1; i < 2*n; i++)
+    cout << "Basic Operation";
+  for (int i = n/2; i >= 1; i--)
+    cout << "Basic Operation";
+}
+```
+
+위쪽 for문이 (2n-1), 아래쪽 for문이 (n/2)로 둘을 합하면, 5n/2 - 1 이 된다. 이는 O(n)에 속한다. 이는 선형 알고리즘에 해당된다.
+
+<br>
+
+**🔧problem ex2)**
+
+```cpp
+void algorithm2(int n) {
+  for (int i = 1; i < 2*n; i++)
+    for (int j = n/2; j >= 1; j--)
+      cout << "Basic Operation";
+}
+```
+
+바깥쪽 for문이 (2n-1), 안쪽 for문이 (n/2)로 둘을 곱하면, (n^2)-(n/2)이 된다. 이는 O(n^2)에 속하고, 이는 quadratic 알고리즘이다.
+
+<br>
+
+**🔧problem ex3)**
+
+```cpp
+void algorithm3(int n) {
+  for (int i = 1; i <= n; i *= 2)
+    for (int j = n; j >= 1; j /= 2)
+      cout << "Basic Operation";
+}
+```
+
+![로그](algorithms.assets/로그.jpg)
+
+바깥쪽 for문이 (lgn+1)이고, 안쪽 for문도 (lgn+1)이므로, 이 둘을 곱하면, (lgn^2 + 2lgn + 2)가 된다. 이는 O(lgn^2)에 속한다.
+
+<br>
+
+**🔧problem ex4)**
+
+```cpp
+void algorithm4(int n, int m) {
+  for (int i = 1; i < 2*n; i++)
+    cout << "Basic Operation";
+  for (int i = 1; i < m/2; i++) {
+    cout << "Basic Operation";
+  }
+}
+```
+
+위쪽 for문은 (2n-1)이고, 아래쪽 for문은 (m/2-1)이므로, 이 둘을 더하면 (2n + m/2 - 2)이다. 이는 O(n) + O(m) = O(n+m)이 된다.
+
+<br>
+
+**🔧problem ex5)**
+
+```cpp
+void algorithm5(int n) {
+  algorithm1(n);
+  for (int i = 1; i < n; i++) {
+    algorithm2(n);
+    for (int j = 1; i < n; j++)
+      algorithm3(n);
+  }
+}
+```
+
+전체적인 구조를 보면, algo1 + (n - 1)(algo2 + (n-1)algo3)이 된다. 이를 계산하면 O(n) + O(n^3)으로, 결국 O(n^3)이라는 값이 나온다. 이는 cubic 알고리즘에 해당된다.
+
+<br>
+
+**🔧problem ex6)**
+
+```cpp
+void algorithm6(int n) {
+  if (n <= 1) {
+    cout << "Basic Operation";
+  }
+  else {
+    algorithm(n/2);
+    algorithm(n/2);
+    cout << "Basic Operation";
+  }
+}
+```
+
+!!basic operation의 총 수행 횟수를 구하면 됨!! 이때, 재귀호출은 반드시 종료조건을 가진다.
+
+![practice](algorithms.assets/practice.jpg)
+
+총 2^(lgn+1) 이 나온다.
+
+<br>
+
+**🔧problem ex7)**
+
+```cpp
+void algorithm7(int n) {
+  if (n <= 1) {
+    cout << "Basic Operation";
+  } else {
+    algorithm7(n/4);
+    algorithm7(n/4);
+    algorithm7(n/4);
+    cout << "Basic Operation";
+  }
+}
+```
+
+![practice2](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/practice2.jpg)
+
+식을 정의하진 못했지만, algorithm7(1) = 3^0, algorithm7(4) = 3^0 + 3^1, algorithm7(8) = 3^0 + 3^1 + 3^2 와 같은 규칙이 있는 것을 발견하였다.
