@@ -10,6 +10,12 @@
 
 <br>
 
+📌마스터 이론
+
+![master](algorithms.assets/master.jpg)
+
+<br>
+
 **🔧problem ex1) - Binary Search(recursive)**
 
 > **Description**
@@ -79,6 +85,14 @@ int main() {
     }
 }
 ```
+
+- basic operation: 찾고자 하는 값(find)를 S[mid]와 비교하는 연산
+- input size: 배열 S의 원소 개수(n)
+- n을 2의 거듭제곱 수라고 가정했을 때,
+  - n = 1 -> **W(1) = 1**
+  - n > 1 -> **W(n) = W(n/2) + 1**
+  - 이때, W(n/2)는 분할한 subarray의 시간 복잡도이고, 1은 분할하기 위해 한 번 비교하는 시간 복잡도이다.
+  - 마스터 정리를 사용하면, **W(n) = θ(log2(n))** 이다. (a=1, b=2, c=0)
 
 <br>
 
@@ -187,6 +201,14 @@ int main() {
 ```
 
 => Quicksort보다 공간 복잡도가 훨씬 큼! U, V 배열을 계속해서 선언하기 때문에 메모리 공간을 차지함
+
+- basic operation: U[i]랑 V[j]의 비교연산
+- input size: 배열 S의 원소 개수(n)
+- W(n) = W(h) (U배열 sorting 시간) + W(m) (V배열 sorting 시간) + h + m - 1 (합병 시간)
+- n을 2의 거듭제곱 수라고 가정했을 때,
+  - n = 1 -> **W(1) = 0**
+  - n > 1 -> **W(n) = 2W(n/2) + n - 1**
+  - 마스터 정리를 사용하면, **W(n) = θ(nlog2(n))** 이다. (a=2, b=2, k=1)
 
 <br>
 
@@ -391,6 +413,17 @@ int main() {
 }
 ```
 
+- basic operation: partition에서 S[i]를 pivotitem이랑 비교하는 연산
+- input size: 배열 S의 원소 개수(n)
+- W(n) = W(0) (왼쪽 배열을 정렬하는 시간)  + W(n - 1) (오른쪽 배열을 정렬하는 시간) + n - 1 (비교 연산의 시간)
+  - n = 0 -> **W(0) = 0**
+  - n > 0 -> **W(n) = n(n - 1) / 2** (점화식을 풀었을 때)
+  - 즉, **W(n) = θ(n^2)** 이다. (a=2, b=2, k=1)
+- Average-Case time complexity
+  - **A(n) = (2 / n) * W(n / 2) + n - 1**
+  - 이때, 2 / n 은 리스트에 있는 n개의 item 중에서 어느 수가 pivotitem이 될 지 모르는 확률값 1 / n에, pivotitem을 기준으로 반반 나뉘는 2를 곱한 값이다. 
+  - 이를 마스터 정리를 활용하면, **θ(nlog2(n))**
+
 <br>
 
 **🔧problem ex5) - 행렬의 거듭제곱**
@@ -521,4 +554,3 @@ int main() {
 ```
 
 ![modular](algorithms.assets/modular.jpg)
-
