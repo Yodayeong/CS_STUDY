@@ -10,3 +10,8 @@
     - [part1](./algorithms.md)
     - [part2](./algorithms2.md)
 - Divide-and-Conquer
+    - [part1](./DivideAndConquer1.md)
+    - [part2](./DivideAndConquer2.md)
+- Dynamic Programming
+    - [part1](./DynamicProgramming1.md)
+    - [part2](./DynamicProgramming2.md)
