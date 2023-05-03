@@ -15,3 +15,7 @@
 - Dynamic Programming
     - [part1](./DynamicProgramming1.md)
     - [part2](./DynamicProgramming2.md)
+
+- 백준
+    - [1931/회의실 배정](./백준/%ED%9A%8C%EC%9D%98%EC%8B%A4%EB%B0%B0%EC%A0%95.cpp)
+    - [1992/쿼드트리](./백준/%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC.cpp)
