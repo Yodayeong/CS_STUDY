@@ -15,6 +15,9 @@
 - Dynamic Programming
     - [part1](./DynamicProgramming1.md)
     - [part2](./DynamicProgramming2.md)
+- Greedy
+    - [Greedy란](./greedy.md)
+    - [Scheduling](./greedy_scheduling.md)
 
 - 백준
     - [1931/회의실 배정](./백준/%ED%9A%8C%EC%9D%98%EC%8B%A4%EB%B0%B0%EC%A0%95.cpp)
