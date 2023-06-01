@@ -16,9 +16,9 @@
 
 - ex)
 
-  ![scheduling1](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/scheduling1.jpeg)
+  ![scheduling1](algorithms.assets/scheduling1.jpeg)
 
-  ![scheduling2](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/scheduling2.jpeg)
+  ![scheduling2](algorithms.assets/scheduling2.jpeg)
 
 <br>
 
