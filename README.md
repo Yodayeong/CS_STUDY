@@ -20,6 +20,8 @@
     - [데드라인 스케줄링 문제](./greedy_scheduling.md)
     - [허프만 코드와 허프만 알고리즘](./greedy_huffman.md)
     - [분할가능한 배낭문제](./greedy_fractional_knapsack.md)
+- Backtracking
+    - [Backtracking이란](./backtracking.md)
 
 - 백준
     - [1931/회의실 배정](./백준/%ED%9A%8C%EC%9D%98%EC%8B%A4%EB%B0%B0%EC%A0%95.cpp)
