@@ -22,6 +22,7 @@
     - [분할가능한 배낭문제](./greedy_fractional_knapsack.md)
 - Backtracking
     - [Backtracking이란](./backtracking.md)
+    - [n-Queens 문제](./backtracking_n-Queens.md)
 
 - 백준
     - [1931/회의실 배정](./백준/%ED%9A%8C%EC%9D%98%EC%8B%A4%EB%B0%B0%EC%A0%95.cpp)
