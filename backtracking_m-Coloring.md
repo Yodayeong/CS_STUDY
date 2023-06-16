@@ -68,17 +68,11 @@ vector<int> vcolor;
 int n, k;
 int cnt = 0, m = 1; //m은 색칠가능한 최소의 색상 수, cnt는 m으로 색칠할 수 있는 경우의 수
 
-bool promising(int i)
-{
+bool promising(int i) {
     int j = 1;
     bool flag = true;
-    while (j < i && flag)
-    {
-        //1. i와 j 사이에 간선이 존재하고,
-        //2. i의 색상과 j의 색상이 동일하다면,
-        //non-promising 하다.
-        if (W[i][j] && vcolor[i] == vcolor[j])
-        {
+    while(j < i && flag) {
+        if(W[i][j] && vcolor[i] == vcolor[j]) {
             flag = false;
         }
         j++;
@@ -86,34 +80,22 @@ bool promising(int i)
     return flag;
 }
 
-void m_coloring(int i)
-{
+void m_coloring(int i) {
     int color;
-    if (promising(i))
-    {
-        if (i == n)
-        {
+    if(promising(i)) {
+        if(i == n) {
             cnt++;
-            /*for (int j = 1; j <= n; j++)
-            {
-                cout << vcolor[j] << ' ';
-            }
-            cout << "\n";*/
         }
-        else
-        {
-            for (color = 1; color <= m; color++)
-            {
-                vcolor[i + 1] = color;
-                m_coloring(i + 1);
-            }
+    }
+    else {
+        for(color = 1; color <= m; color++) {
+            vcolor[i + 1] = color;
+            m_coloring(i + 1);
         }
-
     }
 }
 
-int main()
-{
+int main() {
     cin >> n >> k;
 
     vcolor.resize(n + 1);
@@ -133,23 +115,16 @@ int main()
         W[b][a] = 1;
     }
 
-    while (1)
-    {
+    while(1) {
+        //cnt가 0이 아니라 정수가 나올때까지
+        //m을 증가시켜가면서, 0번째 노드부터 m_coloring을 무한반복
         m_coloring(0);
 
-        //cnt가 0이 아니라는 말은, 적절한 색상이 할당되었다는 것으로
-        //break를 통해 반복문 종료
-        if (cnt != 0)
-        {
+        if(cnt != 0) {
             break;
         }
-
-        //그렇지 않다면, 다른 색상을 시도해봐야 함
         m++;
     }
-    
-    cout << m << "\n" << cnt;
-
 }
 ```
 
