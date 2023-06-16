@@ -85,12 +85,18 @@ void m_coloring(int i) {
     if(promising(i)) {
         if(i == n) {
             cnt++;
+            /*
+            for(int j = 1; j <= n; j++) {
+                cout << vcolor[j] << " ";
+            }
+            cout << "\n";
+            */
         }
-    }
-    else {
-        for(color = 1; color <= m; color++) {
-            vcolor[i + 1] = color;
-            m_coloring(i + 1);
+        else {
+            for(color = 1; color <= m; color++) {
+                vcolor[i + 1] = color;
+                m_coloring(i + 1);
+            }
         }
     }
 }
@@ -125,6 +131,7 @@ int main() {
         }
         m++;
     }
+    cout << m << "\n" << cnt;
 }
 ```
 
