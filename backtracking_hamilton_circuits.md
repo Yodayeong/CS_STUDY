@@ -65,5 +65,83 @@ promising: 이때, 방문한 정점을 체크하고 중복 방문을 방지
 > ```
 
 ```cpp
-```
+#include <iostream>
+#include <vector>
+using namespace std;
 
+vector<vector<int>> W;
+vector<int> vindex; //정점들의 순서를 나타내는 배열
+int n, m;
+int cnt = 0;
+
+bool promising(int i) {
+    int j;
+    bool flag;
+    //1. i가 마지막 정점이지만, 첫번째 정점과 연결되어 있지 않은 경우
+    if(i == n - 1 && !W[vindex[n - 1]][vindex[0]])
+        flag = false;
+    //2. i가 0보다 크고, 이전 정점과 현재 정점이 연결되어 있지 않은 경우
+    //non-promising 하다.
+    else if(i > 0 && !W[vindex[i - 1]][vindex[i]])
+        flag = false;
+    //그렇지 않은 경우,
+    else {
+        flag = true;
+        j = 1;
+        while(j < i && flag) {
+            //중복 방문한 노드가 있다면,
+            //non-promising 하다.
+            if(vindex[i] == vindex[j])
+                flag = false;
+            j++;
+        }
+    }
+    return flag;
+}
+
+void hamilton(int i) {
+    int j;
+    if(promising(i)) {
+        if(i == n - 1) {
+            cnt++;
+            /*
+            for(int i = 0; i <= n - 1; i++) {
+                cout << vindex[i] << " ";
+            }
+            cout << "\n";
+            */
+        }
+        else {
+            for(j = 2; j <= n; j++) {
+                vindex[i + 1] = j;
+                hamilton(i + 1);
+            }
+        }
+    }
+}
+
+int main() {
+    cin >> n >> m;
+    
+    W.resize(n + 1);
+    vindex.resize(n + 1);
+
+    for(int i = 0; i <= n; i++) {
+        W[i].resize(n + 1);
+    }
+    
+    for(int i = 0; i < m; i++) {
+        int a, b;
+        cin >> a >> b;
+
+        W[a][b] = 1;
+        W[b][a] = 1;
+    }
+
+    vindex[0] = 1;
+
+    hamilton(0);
+
+    cout << cnt;
+}
+```
