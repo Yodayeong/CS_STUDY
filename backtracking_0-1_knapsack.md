@@ -1,4 +1,4 @@
-## 0-1 배낭문제와 백트래킹
+## Backtracking - 0-1 배낭문제와 백트래킹
 
 배낭의 용량을 넘지 않으면서 가치가 최대가 되는 S의 부분집합 A 찾기
 
@@ -135,7 +135,7 @@ bool promising(int i, int profit, int weight) {
             bound += (W - totweight) * ((float)p[k] / w[k]);
         }
         bound1 = bound;
-        cout << i << " " << weight << " " << profit << " " << bound << " " << maxprofit << "\n";
+        cout << i << " " << weight << " " << profit << " " << bound1 << " " << maxprofit << "\n";
         return bound > maxprofit;
     }
 }
