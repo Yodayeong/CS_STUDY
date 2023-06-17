@@ -27,6 +27,7 @@
     - [m-Coloring 문제](./backtracking_m-Coloring.md)
     - [해밀턴 회로 문제](./backtracking_hamilton_circuits.md)
     - [0-1 배낭문제와 동적계획법](./backtracking_0-1_knapsack_dp.md)
+    - [0-1 배낭문제와 백트래킹](./backtracking_0-1_knapsack.md)
 
 - 백준
     - [1931/회의실 배정](./백준/%ED%9A%8C%EC%9D%98%EC%8B%A4%EB%B0%B0%EC%A0%95.cpp)
