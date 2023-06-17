@@ -14,7 +14,7 @@ n * m 체스보드에서 knight가 모든 지역을 반드시 한번씩만 방�
 
 - 8개의 방향을 저장 후, 이동이 가능할 때만 이동시킴
 
-![hamilton](/Users/yodayeong/Desktop/CS_STUDY/algorithms.assets/hamilton.jpeg)
+![hamilton](algorithms.assets/hamilton.jpeg)
 
 - 마지막까지 탐색
   - (경로, 회로) if (k == n * m)
