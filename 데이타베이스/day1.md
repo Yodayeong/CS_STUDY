@@ -163,5 +163,6 @@ DBMS의 발전 과정
 - 맥 MySql root 비밀번호 초기화
   - https://velog.io/@sorzzzzy/MySQL-Mac-MySQL-root-비밀번호-초기화하기
 - Cmd 창에서 실행
+  - `mysql.server start`
   - `mysql -u root -p`
   - pw: `root`
