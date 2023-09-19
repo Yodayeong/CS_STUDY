@@ -4,6 +4,23 @@
 
 <br>
 
+### 🗝Database
+- [day1](./데이타베이스/day1.md)
+- [day2](./데이타베이스/day2.md)
+
+<br>
+
+### 🗝OS
+- [day1](./운영체제/day1.md)
+
+<br>
+
+### 🗝컴퓨팅 사고
+- [day1](./컴퓨팅사고/day1.md)
+- [day2](./컴퓨팅사고/day2.md)
+
+<br>
+
 ### 🗝Algorithms
 
 - Algorithms: Efficiency, Analysis, and Order
