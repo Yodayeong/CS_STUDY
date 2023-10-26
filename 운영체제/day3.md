@@ -75,7 +75,7 @@ Process States - (3-State Model)
 
 5-State Model
 
-![IMG_FE4FB11A7459-1](/Users/yodayeong/Desktop/CS_STUDY/운영체제/image.assets/IMG_FE4FB11A7459-1.jpeg)
+![IMG_FE4FB11A7459-1](image.assets/IMG_FE4FB11A7459-1.jpeg)
 
 - New랑 Exit가 추가됨
 - New(Creation): **PCB를 메모리에 올리기 전까지의 상태**
@@ -89,7 +89,7 @@ Process States - (3-State Model)
 
 7-State Model
 
-![IMG_9BA51B4FB8E6-1](/Users/yodayeong/Desktop/CS_STUDY/운영체제/image.assets/IMG_9BA51B4FB8E6-1.jpeg)
+![IMG_9BA51B4FB8E6-1](image.assets/IMG_9BA51B4FB8E6-1.jpeg)
 
 - Main memory영역과 별개의 Disk 공간에 해당하는 Blocked/suspend와 Ready/suspend가 추가됨
 - 메모리의 공간이 부족하면 일부 또는 전체를 disk의 특정 영역으로 swap out
@@ -110,7 +110,7 @@ Process States - (3-State Model)
 
 PCB (Process Control Block)
 
-![IMG_AE3404A29F76-1](/Users/yodayeong/Desktop/CS_STUDY/운영체제/image.assets/IMG_AE3404A29F76-1.jpeg)
+![IMG_AE3404A29F76-1](image.assets/IMG_AE3404A29F76-1.jpeg)
 
 - process들의 모든 수행에 필요한 정보를 가지는 data structure
 - 개별 process 마다 자신만의 PCB를 가진다.
