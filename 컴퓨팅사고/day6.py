@@ -37,3 +37,5 @@ print(composer_)
 
 numbers = 1, 2, 3
 print(numbers, type(numbers)) #(1, 2, 3) <class 'tuple'>
+a, b, c = numbers
+print(a, type(a)) #1
